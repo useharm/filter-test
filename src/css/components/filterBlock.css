@@ -1,0 +1,122 @@
+.container_filter {
+    flex: 0 0 25%;
+    max-width: 25%;
+    height: 100%;
+    min-width: 224px;
+}
+
+.container_filter span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #898989;
+}
+.container_filter h2 {
+    margin: 5px 0 12px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+.container_filter h3 {
+    margin-bottom: 12px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1B1B1B;
+    margin-bottom: 12px;
+}
+.filter_price-wrapper {
+    margin-bottom: 24px;
+}
+.filter_price-wrapper h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;  
+    color: #1B1B1B;    
+}
+.filter_price-field {
+    display: flex;
+}
+.filter_price-field input {
+    width: 112px;
+    height: 40px;
+    border: 1px solid #DBDBDB;
+    padding: 11px 10px;
+    transition: .5s;
+}
+.filter_price-field input::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+.filter_price-field input:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.filter_price-field input:last-child {
+    border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.filter_price-field:hover input{
+    border: 1px solid #A7A7A7;
+}
+.filter_brand-field-wrapper {
+    display: flex;
+}
+.filter_brand-field-wrapper label {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1B1B1B;
+    cursor: pointer;
+}
+.filter_brand-field input {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #D0D0D0;
+    margin: 0 10px 9px 0;
+    cursor: pointer;
+}
+.filter_brand-field input:checked + label::before{
+    background-color: red;
+}
+
+
+
+@media (max-width: 942px) {
+    .container_filter {
+        max-width: 100%;
+        margin-bottom: 34px;
+        display: flex;
+        flex-direction: column;
+        width: 242px;
+    }
+    .container_filter h2 {
+        order: 1;
+        margin: 27px 0 24px 0;
+    }
+    .filter_price-wrapper {
+        order: 3;
+        margin: 18px 0 24px 0;
+    }
+    .filter_brand-wrapper {
+        order: 4;
+    }
+    .container_filter span {
+        order: 2;
+    }
+}

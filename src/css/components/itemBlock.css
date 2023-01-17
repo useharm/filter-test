@@ -1,0 +1,102 @@
+.container_items {
+    flex: 0 0 75%;
+    max-width: 75%;
+    margin-left: 38px;
+}
+.item_block-wrapper {
+    max-width: 242px;
+    grid-column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+.item_block-image {
+    height: 242px;
+    width: 242px;
+    border: 1px solid red;
+}
+.item_block h4{
+    margin: 12px 0 30px 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+.item_block-price-field {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px 18px 16px;
+}
+.item_block-price-field h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+.item_block-price-field span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+.item_block-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px 16px 16px;
+}
+.item_block-footer svg {
+    cursor: pointer;
+}
+.item_block-button {
+    width: 106px;
+    height: 40px;
+    border: 1px solid #DBDBDB;
+    padding: 7px 12px 12px 12px;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+.item_block-button span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #1B1B1B;
+}
+
+@media (max-width: 1600px) {
+    .item_block-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1240px) {
+    .item_block-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 942px) {
+    .container_items {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .item_block-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
