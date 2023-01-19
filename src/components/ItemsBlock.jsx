@@ -12,11 +12,12 @@ const ItemsBlock = () => {
                         <div className='item_block-wrapper'>
                             {items.map((item, index) => (
                             <div className='item_block' key={index}>
+                                {item.is_new ? <div className='item_block-new'><span>Новинка</span></div> : null}
                                 <img className='item_block-image' src={item.image ? item.image.desktop.x1 : imageless}/>
                                 <h4>{item.title}</h4>
                                 <div className='item_block-price-field'>
                                     <h3>{new Intl.NumberFormat('ru-RU').format(item.price) + ' ₽'}</h3>
-                                    <span>Новое</span>
+                                    {(item.condition > 3) ? <span>Новое</span> : null}
                                 </div>
                                 <div className='item_block-footer'>
                                 <button className='item_block-button'>В корзину</button>

@@ -7,10 +7,6 @@ const SearchBlock = () => {
     const items = useSelector(state => state.items);
     const minPrice = items.map(item => item.price).reduce((acc, next) => Math.min(acc, next), 0);
     const maxPrice = items.map(item => item.price).reduce((acc, next) => Math.max(acc, next), 0);
-    const [price, setPrice] = useState({
-        min: '',
-        max: '',
-    })
     const [value, setValue] = useState({
         firstValue: '',
         secondValue: '',   
@@ -19,16 +15,10 @@ const SearchBlock = () => {
     useEffect(() => {
         dispatch(setPriceValue(value))
     }, [value])
-    /* useEffect(() => {
-        setPrice({
-            min: items.map(item => item.price).reduce((acc, next) => Math.min(acc, next), 0),
-            max: items.map(item => item.price).reduce((acc, next) => Math.max(acc, next), 0),
-        })
-    }, [items]) */
 
     return (
         <div>
-            <span>Товаров 147</span>
+            <span>Товаров {items.length}</span>
             <h2>Объективы</h2>
             <div className='filter_price-wrapper'>
                 <h3>Цена, ₽</h3>
