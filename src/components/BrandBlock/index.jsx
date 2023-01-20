@@ -16,7 +16,7 @@ const BrandBlock = () => {
             <h3>Бренд</h3>
             <div className='filter_brand-field'>
                 {brand.map((item, index) => (<div className='filter_brand-field-wrapper' key={index}> 
-                    <input id={index} name={'value' + index} type="checkbox" onClick={() => searchBrand(item)}></input>
+                    <input id={index} name={'value' + index} type="checkbox" onClick={() => searchBrand(item)} className='input-checkbox'></input>
                     <label htmlFor={index}>{item.title}</label>
                 </div>))}
             </div>

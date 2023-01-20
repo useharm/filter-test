@@ -1,5 +1,4 @@
 .container_filter {
-    flex: 0 0 25%;
     max-width: 25%;
     height: 100%;
     min-width: 224px;
@@ -69,41 +68,77 @@
     border-top-right-radius: 4px;
     border-top-right-radius: 4px;
 }
-.filter_price-field:hover input{
-    border: 1px solid #A7A7A7;
-}
 .filter_brand-field-wrapper {
-    display: flex;
+    margin-bottom: 6px;
 }
-.filter_brand-field-wrapper label {
+.input-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    user-select: none;
+  }
+  .input-checkbox + label {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 140%;
     color: #1B1B1B;
+    display: inline-flex;
+    align-items: center;
     cursor: pointer;
-}
-.filter_brand-field input {
-    height: 18px;
+    user-select: none;
+  }
+  .input-checkbox + label::before {
+    content: "";
+    display: inline-block;
     width: 18px;
-    border: 1px solid #D0D0D0;
-    margin: 0 10px 9px 0;
-    cursor: pointer;
-}
-.filter_brand-field input:checked + label::before{
-    background-color: red;
-}
+    height: 18px;
+    border: 1px solid #d0d0d0;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    background-position: center center;
+    background-size: 60% 60%;
+  }
+  .input-checkbox + label:hover::before {
+    border: 1px solid #a7a7a7;
+    border-radius: 4px;
+  }
+  .input-checkbox:checked + label::before {
+    border-color: #7993a6;
+    background-color: #7993a6;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
 
-
+@media (max-width: 1240px) {
+    .container_filter {
+        max-width: 75%;
+        margin: 0 auto 34px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container_filter h2 {
+        order: 1;
+        margin: 27px 0 24px 0;
+    }
+    .filter_price-wrapper {
+        order: 3;
+        margin: 18px 0 24px 0;
+    }
+    .filter_brand-wrapper {
+        order: 4;
+    }
+    .container_filter span {
+        order: 2;
+    }
+}
 
 @media (max-width: 942px) {
     .container_filter {
-        max-width: 100%;
-        margin-bottom: 34px;
+        max-width: 80%;
+        margin: 0 auto 34px;
         display: flex;
         flex-direction: column;
-        width: 242px;
     }
     .container_filter h2 {
         order: 1;

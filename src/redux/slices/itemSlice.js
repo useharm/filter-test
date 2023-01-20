@@ -8,6 +8,7 @@ const initialState = {
     secondValue: '',
   },
    brandValue: [],
+   isFavItem: [],
 };
 
 export const fetchItems = createAsyncThunk("item/fetchItems", async ({searchValue, brandValue}) => {
@@ -45,6 +46,9 @@ const itemSlice = createSlice({
         } else {
           state.brandValue = [...state.brandValue.filter(item => item.index !== action.payload.index)];
         }
+    },
+    setIsFavItem: (state, action) => {
+      state.isFavItem = action.payload
     }
   },
   extraReducers: (builder) => {
@@ -61,5 +65,5 @@ const itemSlice = createSlice({
   }
 });
 
-export const { setPriceValue, setBrandValue } = itemSlice.actions;
+export const { setPriceValue, setBrandValue, setIsFavItem } = itemSlice.actions;
 export default itemSlice.reducer;
