@@ -38,11 +38,11 @@
 
     .container {
         padding: 20px;
+        width: 90%;
         
     }
     .content {
       display: block;
-      width: 75%;
       margin: 0 auto;
   }
   }
@@ -53,5 +53,14 @@
     }
     .content {
         display: block; 
+    }
+  }
+  @media (max-width: 645px) {
+    .wrapper {
+      width: 100vw;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
     }
   }

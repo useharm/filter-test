@@ -135,7 +135,6 @@
 
 @media (max-width: 942px) {
     .container_filter {
-        max-width: 80%;
         margin: 0 auto 34px;
         display: flex;
         flex-direction: column;
@@ -153,5 +152,18 @@
     }
     .container_filter span {
         order: 2;
+    }
+}
+@media (max-width: 645px) {
+    .container_filter {
+        margin: 0 auto 34px;
+        max-width: 100%;
+    }
+    .container_filter-wrapper {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .filter_price-wrapper {
+        width: 345px;
     }
 }

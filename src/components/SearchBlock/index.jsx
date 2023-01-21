@@ -17,7 +17,7 @@ const SearchBlock = () => {
     }, [value])
 
     return (
-        <div>
+        <div className='filter_price-wrapper'>
             <span>Товаров {items.length}</span>
             <h2>Объективы</h2>
             <div className='filter_price-wrapper'>
